@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%" style="background:#0d1117; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="56" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="24" y="34" fill="#58a6ff" font-size="19" font-weight="700">Miniature Magnetic Chess Piece Set CAD & Ergonomics</text>
+  <text x="640" y="34" fill="#8b949e" font-size="13" font-weight="600">Hour 11 | CAD Pieces</text>
+
+  <!-- Main Canvas: 6 Pieces Orthographic Profiles -->
+  <g transform="translate(40, 80)">
+    <rect x="0" y="0" width="720" height="270" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="20" y="26" fill="#7ee787" font-size="14" font-weight="700">Miniaturized Staunton Set Profiles (With Embedded Base Magnets)</text>
+
+    <!-- Ground baseline -->
+    <line x1="20" y1="230" x2="700" y2="230" stroke="#484f58" stroke-width="2"/>
+    <text x="700" y="245" fill="#8b949e" font-size="9" text-anchor="end">Datum Floor Z = 0</text>
+
+    <!-- 1. Pawn (Height: 18mm, Base: 12mm) -->
+    <g transform="translate(60, 230)">
+      <!-- Base (12mm wide, 4mm tall) scaled 5x -->
+      <path d="M -30 0 L 30 0 L 25 -20 L -25 -20 Z" fill="#3b4252" stroke="#58a6ff" stroke-width="1.5"/>
+      <!-- Magnet Cavity cutaway -->
+      <rect x="-13" y="-11" width="26" height="11" fill="#f85149" stroke="#ffffff" stroke-width="1"/>
+      <text x="0" y="-3" fill="#ffffff" font-size="7" font-weight="bold" text-anchor="middle">N35</text>
+      <!-- Stem -->
+      <path d="M -22 -20 L -15 -60 L 15 -60 L 22 -20 Z" fill="#4c566a" stroke="#58a6ff"/>
+      <!-- Head sphere -->
+      <circle cx="0" cy="-75" r="16" fill="#eceff4" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="0" y="18" fill="#c9d1d9" font-size="11" font-weight="bold" text-anchor="middle">PAWN</text>
+      <text x="0" y="30" fill="#8b949e" font-size="9" text-anchor="middle">18mm (1 pt)</text>
+    </g>
+
+    <!-- 2. Rook (Height: 22mm, Base: 13.5mm) -->
+    <g transform="translate(180, 230)">
+      <path d="M -34 0 L 34 0 L 28 -20 L -28 -20 Z" fill="#3b4252" stroke="#58a6ff" stroke-width="1.5"/>
+      <rect x="-13" y="-11" width="26" height="11" fill="#f85149" stroke="#ffffff" stroke-width="1"/>
+      <path d="M -26 -20 L -20 -70 L 20 -70 L 26 -20 Z" fill="#4c566a" stroke="#58a6ff"/>
+      <!-- Parapet head with crenels -->
+      <path d="M -26 -70 L 26 -70 L 26 -95 L 16 -95 L 16 -85 L 6 -85 L 6 -95 L -6 -95 L -6 -85 L -16 -85 L -16 -95 L -26 -95 Z" fill="#eceff4" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="0" y="18" fill="#c9d1d9" font-size="11" font-weight="bold" text-anchor="middle">ROOK</text>
+      <text x="0" y="30" fill="#8b949e" font-size="9" text-anchor="middle">22mm (5 pts)</text>
+    </g>
+
+    <!-- 3. Knight (Height: 24mm, Base: 13.5mm) -->
+    <g transform="translate(300, 230)">
+      <path d="M -34 0 L 34 0 L 28 -20 L -28 -20 Z" fill="#3b4252" stroke="#58a6ff" stroke-width="1.5"/>
+      <rect x="-13" y="-11" width="26" height="11" fill="#f85149" stroke="#ffffff" stroke-width="1"/>
+      <path d="M -25 -20 L -20 -60 L 20 -60 L 25 -20 Z" fill="#4c566a" stroke="#58a6ff"/>
+      <!-- Horse head silhouette -->
+      <path d="M -15 -60 Q -30 -85 -22 -105 Q 0 -115 15 -105 Q 25 -90 15 -60 Z" fill="#eceff4" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="0" y="18" fill="#c9d1d9" font-size="11" font-weight="bold" text-anchor="middle">KNIGHT</text>
+      <text x="0" y="30" fill="#8b949e" font-size="9" text-anchor="middle">24mm (3 pts)</text>
+    </g>
+
+    <!-- 4. Bishop (Height: 26mm, Base: 13.5mm) -->
+    <g transform="translate(420, 230)">
+      <path d="M -34 0 L 34 0 L 28 -20 L -28 -20 Z" fill="#3b4252" stroke="#58a6ff" stroke-width="1.5"/>
+      <rect x="-13" y="-11" width="26" height="11" fill="#f85149" stroke="#ffffff" stroke-width="1"/>
+      <path d="M -25 -20 L -16 -75 L 16 -75 L 25 -20 Z" fill="#4c566a" stroke="#58a6ff"/>
+      <!-- Mitre oval head with slit -->
+      <ellipse cx="0" cy="-95" rx="16" ry="20" fill="#eceff4" stroke="#58a6ff" stroke-width="1.5"/>
+      <line x1="2" y1="-105" x2="16" y2="-90" stroke="#2e3440" stroke-width="2"/>
+      <circle cx="0" cy="-117" r="4" fill="#eceff4" stroke="#58a6ff"/>
+      <text x="0" y="18" fill="#c9d1d9" font-size="11" font-weight="bold" text-anchor="middle">BISHOP</text>
+      <text x="0" y="30" fill="#8b949e" font-size="9" text-anchor="middle">26mm (3 pts)</text>
+    </g>
+
+    <!-- 5. Queen (Height: 30mm, Base: 14.5mm) -->
+    <g transform="translate(540, 230)">
+      <path d="M -36 0 L 36 0 L 30 -20 L -30 -20 Z" fill="#3b4252" stroke="#58a6ff" stroke-width="1.5"/>
+      <rect x="-13" y="-11" width="26" height="11" fill="#f85149" stroke="#ffffff" stroke-width="1"/>
+      <path d="M -27 -20 L -18 -85 L 18 -85 L 27 -20 Z" fill="#4c566a" stroke="#58a6ff"/>
+      <!-- Coronet flare & orb -->
+      <path d="M -22 -85 L -26 -115 L -10 -105 L 0 -120 L 10 -105 L 26 -115 L 22 -85 Z" fill="#eceff4" stroke="#58a6ff" stroke-width="1.5"/>
+      <circle cx="0" cy="-125" r="4" fill="#e3b341" stroke="#ffffff"/>
+      <text x="0" y="18" fill="#c9d1d9" font-size="11" font-weight="bold" text-anchor="middle">QUEEN</text>
+      <text x="0" y="30" fill="#8b949e" font-size="9" text-anchor="middle">30mm (9 pts)</text>
+    </g>
+
+    <!-- 6. King (Height: 33mm, Base: 14.5mm) -->
+    <g transform="translate(650, 230)">
+      <path d="M -36 0 L 36 0 L 30 -20 L -30 -20 Z" fill="#3b4252" stroke="#58a6ff" stroke-width="1.5"/>
+      <rect x="-13" y="-11" width="26" height="11" fill="#f85149" stroke="#ffffff" stroke-width="1"/>
+      <path d="M -27 -20 L -18 -95 L 18 -95 L 27 -20 Z" fill="#4c566a" stroke="#58a6ff"/>
+      <!-- Dome & Cross finial -->
+      <path d="M -22 -95 Q 0 -125 22 -95 Z" fill="#eceff4" stroke="#58a6ff" stroke-width="1.5"/>
+      <!-- Cross -->
+      <line x1="0" y1="-120" x2="0" y2="-138" stroke="#e3b341" stroke-width="2.5"/>
+      <line x1="-8" y1="-130" x2="8" y2="-130" stroke="#e3b341" stroke-width="2.5"/>
+      <text x="0" y="18" fill="#c9d1d9" font-size="11" font-weight="bold" text-anchor="middle">KING</text>
+      <text x="0" y="30" fill="#8b949e" font-size="9" text-anchor="middle">33mm (Obj)</text>
+    </g>
+  </g>
+
+  <!-- Bottom: Assembly & Balance Physics Callout -->
+  <g transform="translate(40, 370)">
+    <rect x="0" y="0" width="720" height="100" rx="8" fill="#161b22" stroke="#30363d"/>
+    <text x="20" y="24" fill="#c9d1d9" font-size="12" font-weight="bold">Cavity Engineering & Mass Distribution:</text>
+    <text x="20" y="46" fill="#8b949e" font-size="10">• Every piece contains identical Ø5.2 × 2.2 mm bottom cavity for 5×2 mm N35 magnets</text>
+    <text x="20" y="66" fill="#8b949e" font-size="10">• Magnet sits at extreme bottom datum, lowering center of gravity (CG = 4.2 mm) for anti-tilt stability</text>
+    <text x="20" y="86" fill="#3fb950" font-size="10">✓ Solid base infill + press-fit tolerance (+0.10 mm) eliminates requirement for chemical adhesives</text>
+  </g>
+</svg>
