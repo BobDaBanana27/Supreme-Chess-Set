@@ -1,0 +1,532 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "1a503a79-bab1-4d7b-87ab-ba6b8d62c736")
+	(paper "A3")
+	(title_block
+		(title "Supreme Chess Set — Core System Board")
+		(date "2026-11-08")
+		(rev "1.0")
+		(company "Supreme Chess / Hack Club")
+		(comment 1 "RP2040-Zero MCU, SSD1306 0.96 OLED, LiPo Power & Sensor Bus")
+	)
+	(lib_symbols
+		(symbol "Device:Generic"
+			(pin_numbers (hide yes))
+			(pin_names (offset 1.016))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "Generic" (at 0 -2.54 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+			(property "Datasheet" "" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+			(property "Description" "" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+			(symbol "Generic_0_1"
+				(rectangle (start -10 10) (end 10 -10) (stroke (width 0.254)) (fill (type background)))
+			)
+		)
+	)
+
+	(symbol
+		(lib_id "Device:Generic")
+		(at 150.0 100.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2b78c4e4-45ea-4489-976f-97d09a6bd34c")
+		(property "Reference" "U1"
+			(at 150.0 95.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "RP2040-Zero"
+			(at 150.0 105.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Module:RP2040-Zero"
+			(at 150.0 100.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 150.0 100.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" ""
+			(at 150.0 100.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "d3fced3c-1520-4fa7-88d4-c3354bc2afc6"))
+		(pin "2" (uuid "e31fe859-17d6-4f07-b0b1-7d12792cb819"))
+		(pin "3" (uuid "241d0975-3699-42cb-85ab-cdbd2e49dc59"))
+		(pin "4" (uuid "830312f2-efa3-473e-93b1-898c3ffe9c6e"))
+		(pin "5" (uuid "4268b8da-2b94-46b1-a1f1-15c078bfe4a6"))
+		(pin "6" (uuid "10f20af8-554c-480b-abac-e85b35419e49"))
+		(pin "7" (uuid "40a1c194-d20b-42e8-8733-1bf655d45c7e"))
+		(pin "8" (uuid "db1b1aa9-edd2-4a1d-a5f0-2a29e50f0761"))
+		(pin "9" (uuid "f696887b-4340-4296-afa9-57ce30613b74"))
+		(pin "10" (uuid "281674d8-7f71-450f-852d-112285195302"))
+		(pin "11" (uuid "21195376-2ded-4d4b-9204-6645f763453f"))
+		(pin "12" (uuid "78454818-a229-487f-94bc-d86c8ba1d2c2"))
+		(pin "13" (uuid "821d78f4-bb3a-4034-b213-61e9e9adeb1b"))
+		(pin "14" (uuid "d91c2ab0-8be4-4f7a-8f47-4b4dcefb8803"))
+		(instances
+			(project "supreme_chess"
+				(path "/1a503a79-bab1-4d7b-87ab-ba6b8d62c736"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Generic")
+		(at 70.0 100.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d7642a67-3825-43f9-b3ab-3dacad0e7afd")
+		(property "Reference" "DISP1"
+			(at 70.0 95.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "SSD1306_128x64_OLED"
+			(at 70.0 105.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Display:OLED_0.96_128x64_I2C"
+			(at 70.0 100.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 70.0 100.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" ""
+			(at 70.0 100.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "eca8f410-93a3-4d66-920f-e2e3820f8b68"))
+		(pin "2" (uuid "3a2d81ca-305c-43f8-9a40-5154492079c1"))
+		(pin "3" (uuid "1550d5af-f73a-43f6-b511-f2b09fa7fdc5"))
+		(pin "4" (uuid "7eddbd4d-9d27-4a79-8813-decb55c7fd3b"))
+		(instances
+			(project "supreme_chess"
+				(path "/1a503a79-bab1-4d7b-87ab-ba6b8d62c736"
+					(reference "DISP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Generic")
+		(at 70.0 50.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3fa8dc7d-6ff5-43c4-ab05-def0177f071e")
+		(property "Reference" "MOD1"
+			(at 70.0 45.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "TP4056_Charger"
+			(at 70.0 55.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Module:TP4056_TypeC"
+			(at 70.0 50.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 70.0 50.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" ""
+			(at 70.0 50.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "82c90a28-7aec-49fa-9da4-bb5e5fbb3104"))
+		(pin "2" (uuid "c531b7d3-85fa-4102-aba6-45b325059c4d"))
+		(pin "3" (uuid "8f50cdbb-8b2a-417c-a9a6-47a7f0422598"))
+		(pin "4" (uuid "97a5a868-4e39-462e-9df5-31f6ac8fba26"))
+		(instances
+			(project "supreme_chess"
+				(path "/1a503a79-bab1-4d7b-87ab-ba6b8d62c736"
+					(reference "MOD1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Generic")
+		(at 110.0 50.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "842a0843-7158-4311-b970-eb6d91bbe87d")
+		(property "Reference" "SW1"
+			(at 110.0 45.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "SPDT_Power"
+			(at 110.0 55.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_SPDT_PCM12"
+			(at 110.0 50.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 110.0 50.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" ""
+			(at 110.0 50.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "ccc56407-13af-4d9d-bcd5-2ea3dbff9730"))
+		(pin "2" (uuid "df69b01c-342b-4aeb-8b78-cca8d1b2f38d"))
+		(pin "3" (uuid "88f3bca6-d38c-4248-b216-08a40decf9ba"))
+		(instances
+			(project "supreme_chess"
+				(path "/1a503a79-bab1-4d7b-87ab-ba6b8d62c736"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Generic")
+		(at 110.0 140.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a123872e-affe-4dcd-8abe-7292b888fee7")
+		(property "Reference" "SW2"
+			(at 110.0 135.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "BTN_Mode"
+			(at 110.0 145.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm"
+			(at 110.0 140.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 110.0 140.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" ""
+			(at 110.0 140.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "91ddb075-3ea1-44b4-91c9-eb7d4b9a419f"))
+		(pin "2" (uuid "421fba3e-afcd-4d7a-8039-44a294aed0e8"))
+		(instances
+			(project "supreme_chess"
+				(path "/1a503a79-bab1-4d7b-87ab-ba6b8d62c736"
+					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Generic")
+		(at 110.0 160.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a8b561c2-ba06-4233-8fa9-37df1105ecb6")
+		(property "Reference" "SW3"
+			(at 110.0 155.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "BTN_Reset"
+			(at 110.0 165.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm"
+			(at 110.0 160.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 110.0 160.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" ""
+			(at 110.0 160.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "374ad828-089e-42b5-9696-839248e4fb43"))
+		(pin "2" (uuid "bebeb0be-5ce1-4be6-b0e4-1a6b78324cc1"))
+		(instances
+			(project "supreme_chess"
+				(path "/1a503a79-bab1-4d7b-87ab-ba6b8d62c736"
+					(reference "SW3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Generic")
+		(at 220.0 100.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8daae70a-030d-4687-9e2a-797f15a5724f")
+		(property "Reference" "J1"
+			(at 220.0 95.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "Conn_Sensor_Bus"
+			(at 220.0 105.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Connector_FFC-FPC:Hirose_FH12-6S-0.5SH"
+			(at 220.0 100.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 220.0 100.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" ""
+			(at 220.0 100.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "80eecb81-8d77-44b3-96e3-260aa039acfa"))
+		(pin "2" (uuid "1f2df356-d3c3-4935-b565-8ee5f95c1775"))
+		(pin "3" (uuid "2772e1a7-1aab-47d5-ad6e-fffa50c0f6be"))
+		(pin "4" (uuid "7b6cecf1-c0e0-4668-8938-70db730e21d1"))
+		(pin "5" (uuid "94de3577-2b27-4abd-80cb-60242fcdc01f"))
+		(pin "6" (uuid "3db6ad52-f30f-436f-a5af-5a3b3efb956b"))
+		(instances
+			(project "supreme_chess"
+				(path "/1a503a79-bab1-4d7b-87ab-ba6b8d62c736"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Generic")
+		(at 90.0 85.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fb9349cb-bef8-44a5-a934-6af6c34c9937")
+		(property "Reference" "R1"
+			(at 90.0 80.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "4.7k"
+			(at 90.0 90.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 90.0 85.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 90.0 85.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" ""
+			(at 90.0 85.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "38ab6ede-1843-4ceb-829f-2432eaa0e1bc"))
+		(pin "2" (uuid "b4650bf4-2556-4a86-8140-cc0a57af37a0"))
+		(instances
+			(project "supreme_chess"
+				(path "/1a503a79-bab1-4d7b-87ab-ba6b8d62c736"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Generic")
+		(at 100.0 85.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "62482e38-f312-49e4-a474-7f21ebd7df60")
+		(property "Reference" "R2"
+			(at 100.0 80.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "4.7k"
+			(at 100.0 90.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 100.0 85.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 100.0 85.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" ""
+			(at 100.0 85.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "0cf20363-70fc-4d40-a8a6-7610b7f65424"))
+		(pin "2" (uuid "ff3fc0fc-a2a6-4bd5-b660-48f3cb074edd"))
+		(instances
+			(project "supreme_chess"
+				(path "/1a503a79-bab1-4d7b-87ab-ba6b8d62c736"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Generic")
+		(at 60.0 120.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c1a80d81-18b1-499c-a449-bc2ad31eb549")
+		(property "Reference" "C1"
+			(at 60.0 115.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "10uF"
+			(at 60.0 125.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 60.0 120.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 60.0 120.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" ""
+			(at 60.0 120.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "dbf54b67-bf6f-4f8f-a294-2f15b24e4ed4"))
+		(pin "2" (uuid "663aa34e-7c58-46a1-917c-4c0396c561ae"))
+		(instances
+			(project "supreme_chess"
+				(path "/1a503a79-bab1-4d7b-87ab-ba6b8d62c736"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Generic")
+		(at 135.0 75.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "34af5c44-7d26-421c-9f05-8cb409e2b947")
+		(property "Reference" "C2"
+			(at 135.0 70.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "0.1uF"
+			(at 135.0 80.0 0)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 135.0 75.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 135.0 75.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" ""
+			(at 135.0 75.0 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "82b7ce5b-3ccf-4947-b4e6-b74040bafcc9"))
+		(pin "2" (uuid "d4a0a07c-80a3-4bc4-bc57-c57d55fc597d"))
+		(instances
+			(project "supreme_chess"
+				(path "/1a503a79-bab1-4d7b-87ab-ba6b8d62c736"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
