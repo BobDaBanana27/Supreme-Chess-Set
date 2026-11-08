@@ -60,35 +60,3 @@ All parts designed in **FreeCAD 1.1** and exported as standard STEP files (impor
 4. **Assemble clamshell** — snap the board grid inlays into each chassis half, slide the capture trays in from the ends.
 5. **Play.**
 
----
-
-## Development Log (18 Hours)
-
-| Hour | Milestone | Work Package |
-|:---:|---|:---:|
-| 01 | Project scope, requirements & travel constraints | [CHUNK_01.md](chunks/CHUNK_01.md) |
-| 02 | Engineering trade study & BOM sourcing | [CHUNK_02.md](chunks/CHUNK_02.md) |
-| 03 | System architecture & magnet layout | [CHUNK_03.md](chunks/CHUNK_03.md) |
-| 04 | Magnetic coupling physics & spacing tolerances | [CHUNK_04.md](chunks/CHUNK_04.md) |
-| 05 | Electrical schematic (KiCad 10) | [CHUNK_05.md](chunks/CHUNK_05.md) |
-| 06 | Sensor matrix circuit design | [CHUNK_06.md](chunks/CHUNK_06.md) |
-| 07 | PCB layout & routing | [CHUNK_07.md](chunks/CHUNK_07.md) |
-| 08 | Base chassis CAD (FreeCAD 1.1) | [CHUNK_08.md](chunks/CHUNK_08.md) |
-| 09 | Board grid inlay CAD — 32 magnet pockets | [CHUNK_09.md](chunks/CHUNK_09.md) |
-| 10 | Capture tray CAD — 16 piece sockets | [CHUNK_10.md](chunks/CHUNK_10.md) |
-| 11 | Full Staunton chess piece set CAD | [CHUNK_11.md](chunks/CHUNK_11.md) |
-| 12 | Electronics caddy & OLED bezel CAD | [CHUNK_12.md](chunks/CHUNK_12.md) |
-| 13 | Firmware: shift register sensor driver | [CHUNK_13.md](chunks/CHUNK_13.md) |
-| 14 | Firmware: FIDE scoring engine | [CHUNK_14.md](chunks/CHUNK_14.md) |
-| 15 | Firmware: OLED UI renderer | [CHUNK_15.md](chunks/CHUNK_15.md) |
-| 16 | Firmware: power management & sleep | [CHUNK_16.md](chunks/CHUNK_16.md) |
-| 17 | Integrated firmware & Arduino sketch | [CHUNK_17.md](chunks/CHUNK_17.md) |
-| 18 | Integration testing & production package | [CHUNK_18.md](chunks/CHUNK_18.md) |
-
-Full documentation in [`docs/`](docs/).
-
----
-
-## License
-
-MIT — free and open for educational and maker use. Built for **Hack Club Half Life 2**.
