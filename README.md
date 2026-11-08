@@ -16,10 +16,16 @@ The **Supreme Chess Set** is a tournament-regulation miniature magnetic travel c
 
 Instead of guessing what piece is moving across a 64-square matrix, the Supreme Chess Set introduces **Positionally Deterministic Capture Sockets**:
 
-1. **Dual Slide-Out Capture Trays:** Two compact slide-out storage drawers (White and Black) extend from the player sides of the board. Each tray contains 15 designated, custom-molded piece sockets shaped and labeled specifically for each captured piece (8× Pawns, 2× Rooks, 2× Knights, 2× Bishops, and 1× Queen).
-2. **Solid-State Magnetic Detection:** Underneath each socket, a miniature unipolar digital Hall-effect sensor (AH49E / A3144) is mounted to a slim carrier PCB strip. When a captured piece—containing a 5×2 mm N35 Neodymium magnet in its base—is placed into its designated socket, the magnetic flux immediately switches the Hall sensor active-LOW.
-3. **Instant Automated Count:** The onboard RP2040 microcontroller does not need complex computer vision to recognize piece types; it simply queries the shift register bus: *"Is the Queen slot triggered? Yes (+9 points). Are both Knight slots triggered? Yes (+6 points)."*
-4. **Live Match OLED Display:** The microcontroller sums up the FIDE material point values in real-time ($< 50\text{ ms}$ latency) and updates a side-mounted 0.96" 128×64 SSD1306 OLED display, showing live White and Black point totals, a dynamic centered material balance gauge bar (e.g. `★ WHITE LEAD: +3 ★`), piece roster badges, and an optional blitz chess match clock (5 min + 3 sec increment).
+1. **Dual Slide-Out Storage & Capture Trays:** Two compact slide-out storage drawers (White and Black) extend from the player sides of the board. Each tray contains **16 designated, custom-molded piece sockets**—meaning all 32 pieces of the chess army have a dedicated home when stowed away for travel:
+   - **Pawns (8 sockets):** Labeled 1 pt each
+   - **Knights (2 sockets):** Labeled 3 pts each
+   - **Bishops (2 sockets):** Labeled 3 pts each
+   - **Rooks (2 sockets):** Labeled 5 pts each
+   - **Queen (1 socket):** Labeled 9 pts
+   - **King (1 socket):** Labeled **♔ KING / 0 pts** (serves as the complete travel storage cradle and active resignation / checkmate detection trigger!)
+2. **Solid-State Magnetic Detection:** Underneath the piece sockets, miniature unipolar digital Hall-effect sensors (AH49E / A3144) are mounted to slim carrier PCB strips. When a captured piece—containing a 5×2 mm N35 Neodymium magnet in its base—is placed into its designated socket, the magnetic flux immediately switches the Hall sensor active-LOW.
+3. **Instant Automated Count & King Detection:** The onboard RP2040 microcontroller queries the shift register bus: *"Is the Queen slot triggered? Yes (+9 points). Are both Knight slots triggered? Yes (+6 points). Is the opponent King cradled? Yes (Checkmate / Resignation registered, 0 material points)."*
+4. **Live Match OLED Display:** The microcontroller sums up the FIDE material point values in real-time ($< 50\text{ ms}$ latency) and updates a side-mounted 0.96" 128×64 SSD1306 OLED display, showing live White and Black point totals, a dynamic centered material balance gauge bar (e.g. `★ WHITE LEAD: +3 ★`), piece roster badges (`K Q R2 B2 N2 P8`), and game over banners (`BLK RESIGNED! W WINS`).
 
 ![System Concept & Architecture Scope](assets/hour01_scope_concept.svg)
 
@@ -27,9 +33,10 @@ Instead of guessing what piece is moving across a 64-square matrix, the Supreme 
 
 ## 2. Key Features
 
+- **Full 32-Piece Molded Storage Portability:** Both Kings have dedicated molded travel sockets labeled `0 pts / Resign`. All 32 pieces snap snugly into molded sockets for travel, preventing rattling or pieces getting lost inside luggage.
 - **Magnetic Travel Retention:** 64 N35 Neodymium disc magnets embedded flush beneath every square, paired with magnets embedded in the bases of all 32 chess pieces. Holds pieces firmly in place even at an 84° vertical tilt or under heavy commuter vibration.
 - **Ultra-Budget Engineering ($26.85 USD Total):** Every single component, IC, PCB, magnet, and gram of 3D filament has been sourced and cost-optimized to remain safely below the $30.00 USD program cap.
-- **32-Bit Serial Shift Register Bus:** Reads all 30 piece capture slots using only 3 MCU GPIO pins (Latch, Clock, Data) via four cascaded 74HC165 shift registers, scanning the entire set in just 32 µs.
+- **32-Bit Serial Shift Register Bus:** Reads all 32 piece capture and storage slots using only 3 MCU GPIO pins (Latch, Clock, Data) via four cascaded 74HC165 shift registers, scanning the entire set in just 32 µs.
 - **Long-Life Rechargeable Power:** Powered by a 3.7V 500mAh LiPo battery with onboard TP4056 USB-C charging and DW01A protection, delivering over **21.8 hours** of continuous active gameplay and over 1.5 years in deep dormant sleep.
 - **Full Open-Source Toolchain:** Designed using 100% free, open-source engineering software: **KiCad 10** for schematics and PCB layout, and **FreeCAD 1.1** for parametric 3D CAD modeling.
 
@@ -65,7 +72,7 @@ Instead of guessing what piece is moving across a 64-square matrix, the Supreme 
 
 The electronic architecture consists of two custom printed circuit boards:
 - **Core Motherboard (`hardware/supreme_chess.kicad_pcb`):** 75.0 mm × 48.0 mm board hosting the RP2040-Zero MCU, SSD1306 OLED header, power management, tactile pushbuttons SW2/SW3, and 6-pin FFC sensor bus output connector.
-- **15-Slot Capture Sensor Strip (`hardware/sensor_strip.kicad_pcb`):** 155.0 mm × 22.0 mm ultra-slim board carrying two cascaded 74HC165 shift registers and 15 SOT-23 Hall sensors pitch-matched to the molded piece sockets.
+- **15-Slot Capture Sensor Strip (`hardware/sensor_strip.kicad_pcb`):** 155.0 mm × 22.0 mm ultra-slim board carrying two cascaded 74HC165 shift registers and 15 SOT-23 Hall sensors pitch-matched to the molded piece sockets (King socket is a physical storage cradle only — no sensor needed, 0 pts).
 - **Schematics:** [`hardware/supreme_chess.kicad_sch`](hardware/supreme_chess.kicad_sch) and [`hardware/sensor_strip.kicad_sch`](hardware/sensor_strip.kicad_sch).
 - **Project Files:** [`hardware/supreme_chess.kicad_pro`](hardware/supreme_chess.kicad_pro).
 
@@ -81,7 +88,7 @@ All mechanical components were designed in **FreeCAD 1.1** with parametric const
 |---|---|---|---|
 | **Base Chassis Shell** | [`cad/supreme_chess_base.FCStd`](cad/supreme_chess_base.FCStd) | [`cad/supreme_chess_base.step`](cad/supreme_chess_base.step) | 168×92×15mm folding clamshell half, dual slide-way rails, Ø3mm hinge knuckles |
 | **Board Grid Inlay** | [`cad/board_grid_half.FCStd`](cad/board_grid_half.FCStd) | [`cad/board_grid_half.step`](cad/board_grid_half.step) | 160×80mm half, 32 blind cylindrical magnet recesses (Ø5.2×2.2mm), 1.3mm top skin |
-| **Capture Tray** | [`cad/capture_tray.FCStd`](cad/capture_tray.FCStd) | [`cad/capture_tray.step`](cad/capture_tray.step) | 156×82mm drawer, 15 molded sockets (P, R, N, B, Q), 0.8mm sensor membrane |
+| **Capture Tray** | [`cad/capture_tray.FCStd`](cad/capture_tray.FCStd) | [`cad/capture_tray.step`](cad/capture_tray.step) | 156×82mm drawer, **16 molded sockets** (K 0pts, Q 9pts, R×2, B×2, N×2, P×8), 0.8mm sensor membrane |
 | **Chess Piece Set** | [`cad/chess_pieces.FCStd`](cad/chess_pieces.FCStd) | [`cad/chess_pieces.step`](cad/chess_pieces.step) | 6 Staunton pieces with standardized base magnet recesses and low center-of-gravity |
 | **Electronics Bezel** | [`cad/electronics_bezel.FCStd`](cad/electronics_bezel.FCStd) | [`cad/electronics_bezel.step`](cad/electronics_bezel.step) | OLED viewing window, tactile button plungers, USB-C strain relief shroud |
 
@@ -97,9 +104,8 @@ The firmware runs on the RP2040 dual-core processor and is available in two read
 
 ### Dynamic OLED Interface Modes:
 - **Mode 1 (Live Scoreboard):** White & Black score tallies, lead badge, and a real-time centered material balance gauge bar.
-- **Mode 2 (Captured Pieces List):** Discrete piece counts for Queen, Rooks, Bishops, Knights, and Pawns.
-- **Mode 3 (Blitz Match Clock):** Dual countdown clock (5 min + 3 sec delay increment) with active turn indicator.
-- **Mode 4 (Hardware Diagnostics):** Live battery voltage (mV), percentage, estimated hours of playtime remaining, and sensor bitfields.
+- **Mode 2 (Captured Pieces List):** Discrete piece counts for Queen, Rooks, Bishops, Knights, Pawns, and King (resign trigger).
+- **Mode 3 (Hardware Diagnostics):** Live battery voltage (mV), percentage, estimated hours of playtime remaining, and sensor bitfields.
 
 ![OLED UI States & Mockups](assets/hour15_oled_ui_states.svg)
 
@@ -120,12 +126,12 @@ To document the engineering journey for the Hack Club Half Life 2 program, the p
 | **07** | PCB Physical Layout & Routing (KiCad 10) | `supreme_chess.kicad_pcb` & `sensor_strip.kicad_pcb` | [CHUNK_07.md](chunks/CHUNK_07.md) |
 | **08** | Base Chassis CAD (FreeCAD 1.1) | `supreme_chess_base.FCStd` & `.step` 3D models | [CHUNK_08.md](chunks/CHUNK_08.md) |
 | **09** | Magnetic Board Grid CAD (FreeCAD 1.1) | `board_grid_half.FCStd` & `.step`, 32 blind cavities | [CHUNK_09.md](chunks/CHUNK_09.md) |
-| **10** | Smart Capture Tray CAD (FreeCAD 1.1) | `capture_tray.FCStd` & `.step`, 15 piece sockets | [CHUNK_10.md](chunks/CHUNK_10.md) |
+| **10** | Smart Capture Tray CAD (FreeCAD 1.1) | `capture_tray.FCStd` & `.step`, **16 piece sockets** (King added) | [CHUNK_10.md](chunks/CHUNK_10.md) |
 | **11** | Magnetic Chess Piece Set CAD (FreeCAD 1.1) | `chess_pieces.FCStd` & `.step`, 6 piece models | [CHUNK_11.md](chunks/CHUNK_11.md) |
 | **12** | Electronics Caddy & OLED Bezel CAD | `electronics_bezel.FCStd` & `.step`, exploded assembly | [CHUNK_12.md](chunks/CHUNK_12.md) |
 | **13** | Firmware Core: Sensor Matrix Driver | Shift register scanner, 3-sample debouncer filter | [CHUNK_13.md](chunks/CHUNK_13.md) |
 | **14** | Firmware Scoring Engine & FIDE Rules | Real-time piece weighting and lead calculation | [CHUNK_14.md](chunks/CHUNK_14.md) |
-| **15** | OLED UI Engine & Dynamic Balance Bar | 4-screen SSD1306 rendering engine and gauge bar | [CHUNK_15.md](chunks/CHUNK_15.md) |
+| **15** | OLED UI Engine & Dynamic Balance Bar | 3-screen SSD1306 rendering engine and gauge bar | [CHUNK_15.md](chunks/CHUNK_15.md) |
 | **16** | Power Management & LiPo Logic | 12-bit ADC fuel gauge, 3-tier inactivity sleep | [CHUNK_16.md](chunks/CHUNK_16.md) |
 | **17** | Integrated Firmware & Arduino IDE Sketch | `supreme_chess_firmware.ino` & `platformio.ini` | [CHUNK_17.md](chunks/CHUNK_17.md) |
 | **18** | Integration Testing & Production Release | Test report, assembly guide, production package | [CHUNK_18.md](chunks/CHUNK_18.md) |
