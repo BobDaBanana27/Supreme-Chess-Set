@@ -37,7 +37,7 @@ The complete system is engineered under strict cost constraints to remain **stri
   - Black captured material point tally.
   - Live Material Balance (e.g., `White: +3` or `Black: +2` or `Equal`).
   - Graphical visual material bar indicator.
-  - Turn indicator / optional Blitz chess clock timer (5 min + 3 sec delay).
+  - Resignation / checkmate status banner.
 
 ### FR-04: Electrical & Power Subsystem
 - **Microcontroller:** RP2040-Zero or Raspberry Pi Pico (Dual ARM Cortex-M0+, 133 MHz, 2MB Flash, USB-C native).
