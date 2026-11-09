@@ -4,7 +4,7 @@
 The electronics bay occupies the side spine of the master chassis half, shielded by the dedicated 3D-printed snap-fit bezel (`cad/electronics_bezel.FCStd` / `.step`).
 - **Bezel Dimensions:** 76.0 mm × 46.0 mm × 8.0 mm.
 - **OLED Window:** A precision 26.0 mm × 15.0 mm beveled window aligns with the active viewing area of the 0.96" SSD1306 monochrome OLED screen.
-- **Button Interface:** Two $\varnothing 4.5\text{ mm}$ cylindrical bores guide spring-loaded button plungers directly over SMD tactile switches SW2 (Mode / Clock) and SW3 (Reset / New Game).
+- **Button Interface:** Two $\varnothing 4.5\text{ mm}$ cylindrical bores guide spring-loaded button plungers directly over SMD tactile switches SW2 (UI Mode) and SW3 (Reset / New Game).
 - **USB-C Interface Port:** A 10.0 mm × 4.0 mm strain-relief port accommodates any standard USB-C cable connector housing without interfering with travel closure.
 
 ---
