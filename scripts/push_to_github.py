@@ -24,6 +24,7 @@ SKIP_PATTERNS = [
     ".FCBak",
     ".pyc",
     ".system_generated",
+    ".history",
 ]
 
 def should_skip(path):
