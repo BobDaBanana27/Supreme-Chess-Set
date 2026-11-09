@@ -8,7 +8,7 @@ Item,Qty,Supplier,Cost/item,Total Cost,link
 7,1,AliExpress,$0.00,$0.00,
 8,1,AliExpress,$0.00,$0.00,
 9,1,LCSC,$0.00,$0.00,
-12,8,AliExpress,$0.00,$0.00,
+12,8,AliExpress,$0.08,$0.64,https://www.aliexpress.us/item/3256803248729112.html
 13,13,LCSC,$0.03,$0.39,https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8J0103T5E_C17414.html
 14,1,AliExpress,$1.01,$1.01,https://www.aliexpress.us/item/3256802958471203.html
 Estimated total shipping,1,,,$0.00,
