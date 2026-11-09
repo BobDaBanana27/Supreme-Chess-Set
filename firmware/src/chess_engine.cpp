@@ -44,18 +44,19 @@ void ChessEngine_UpdateFromBitfields(ChessScoreEngine_t *engine, uint32_t white_
     if (!engine) return;
 
     // --- Tally White Captures (Pieces in White's Capture Tray) ---
-    // Bits 0-7: 8 Pawns
+    // Bits 0-7: 8 Pawns (Row 1)
     engine->white.pawns = count_bits(white_tray_bits, 0, 8);
-    // Bits 8-9: 2 Knights
-    engine->white.knights = count_bits(white_tray_bits, 8, 2);
-    // Bits 10-11: 2 Bishops
-    engine->white.bishops = count_bits(white_tray_bits, 10, 2);
-    // Bits 12-13: 2 Rooks
-    engine->white.rooks = count_bits(white_tray_bits, 12, 2);
-    // Bit 14: Queen
-    engine->white.queen = count_bits(white_tray_bits, 14, 1);
-    // Bit 15: King (0 material points - resignation / checkmate slot)
-    engine->white.king = count_bits(white_tray_bits, 15, 1);
+    // Row 2 (Bits 8-15) - Symmetrical Back Rank [R1, N1, B1, Q, K, B2, N2, R2]:
+    // Bits 8 & 15: 2 Rooks
+    engine->white.rooks = ((white_tray_bits >> 8) & 1) + ((white_tray_bits >> 15) & 1);
+    // Bits 9 & 14: 2 Knights
+    engine->white.knights = ((white_tray_bits >> 9) & 1) + ((white_tray_bits >> 14) & 1);
+    // Bits 10 & 13: 2 Bishops
+    engine->white.bishops = ((white_tray_bits >> 10) & 1) + ((white_tray_bits >> 13) & 1);
+    // Bit 11: Queen
+    engine->white.queen = ((white_tray_bits >> 11) & 1);
+    // Bit 12: King (0 material points - resignation / checkmate slot)
+    engine->white.king = ((white_tray_bits >> 12) & 1);
 
     engine->white.total_points = (engine->white.pawns * VAL_PAWN) +
                                  (engine->white.knights * VAL_KNIGHT) +
@@ -65,18 +66,19 @@ void ChessEngine_UpdateFromBitfields(ChessScoreEngine_t *engine, uint32_t white_
                                  (engine->white.king * VAL_KING);
 
     // --- Tally Black Captures (Pieces in Black's Capture Tray) ---
-    // Bits 0-7: 8 Pawns
+    // Bits 0-7: 8 Pawns (Row 1)
     engine->black.pawns = count_bits(black_tray_bits, 0, 8);
-    // Bits 8-9: 2 Knights
-    engine->black.knights = count_bits(black_tray_bits, 8, 2);
-    // Bits 10-11: 2 Bishops
-    engine->black.bishops = count_bits(black_tray_bits, 10, 2);
-    // Bits 12-13: 2 Rooks
-    engine->black.rooks = count_bits(black_tray_bits, 12, 2);
-    // Bit 14: Queen
-    engine->black.queen = count_bits(black_tray_bits, 14, 1);
-    // Bit 15: King (0 material points)
-    engine->black.king = count_bits(black_tray_bits, 15, 1);
+    // Row 2 (Bits 8-15) - Symmetrical Back Rank [R1, N1, B1, Q, K, B2, N2, R2]:
+    // Bits 8 & 15: 2 Rooks
+    engine->black.rooks = ((black_tray_bits >> 8) & 1) + ((black_tray_bits >> 15) & 1);
+    // Bits 9 & 14: 2 Knights
+    engine->black.knights = ((black_tray_bits >> 9) & 1) + ((black_tray_bits >> 14) & 1);
+    // Bits 10 & 13: 2 Bishops
+    engine->black.bishops = ((black_tray_bits >> 10) & 1) + ((black_tray_bits >> 13) & 1);
+    // Bit 11: Queen
+    engine->black.queen = ((black_tray_bits >> 11) & 1);
+    // Bit 12: King (0 material points)
+    engine->black.king = ((black_tray_bits >> 12) & 1);
 
     engine->black.total_points = (engine->black.pawns * VAL_PAWN) +
                                  (engine->black.knights * VAL_KNIGHT) +
