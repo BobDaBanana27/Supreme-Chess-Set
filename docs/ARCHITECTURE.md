@@ -87,9 +87,6 @@ The 30 capture slots map into a 32-bit integer bitfield (Bits 0–29 used, Bits 
           |
           v
  [Render OLED Display: Material Bar, Point Delta, Piece Badges]
-          |
-          v
- [Optional: Update Match Clock (Blitz 5+3s Timer)]
 ```
 
 ---
