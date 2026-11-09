@@ -86,22 +86,24 @@ static void update_scores() {
     uint32_t w_bits = debounced_state & 0xFFFF;        // All 16 bits of White Tray
     uint32_t b_bits = (debounced_state >> 16) & 0xFFFF; // All 16 bits of Black Tray
 
+    // Row 1 (Bits 0-7): 8 Pawns
     w_pawns   = count_bits_range(w_bits, 0, 8);
-    w_knights = count_bits_range(w_bits, 8, 2);
-    w_bishops = count_bits_range(w_bits, 10, 2);
-    w_rooks   = count_bits_range(w_bits, 12, 2);
-    w_queen   = count_bits_range(w_bits, 14, 1);
-    w_king    = count_bits_range(w_bits, 15, 1); // King: 0 pts, Resign / Checkmate
+    // Row 2 (Bits 8-15): Symmetrical Classical Rank [R1, N1, B1, Q, K, B2, N2, R2]
+    w_rooks   = ((w_bits >> 8) & 1) + ((w_bits >> 15) & 1);
+    w_knights = ((w_bits >> 9) & 1) + ((w_bits >> 14) & 1);
+    w_bishops = ((w_bits >> 10) & 1) + ((w_bits >> 13) & 1);
+    w_queen   = ((w_bits >> 11) & 1);
+    w_king    = ((w_bits >> 12) & 1); // King: 0 pts, Resign / Checkmate
 
     w_score = (w_pawns * VAL_PAWN) + (w_knights * VAL_KNIGHT) + 
               (w_bishops * VAL_BISHOP) + (w_rooks * VAL_ROOK) + (w_queen * VAL_QUEEN);
 
     b_pawns   = count_bits_range(b_bits, 0, 8);
-    b_knights = count_bits_range(b_bits, 8, 2);
-    b_bishops = count_bits_range(b_bits, 10, 2);
-    b_rooks   = count_bits_range(b_bits, 12, 2);
-    b_queen   = count_bits_range(b_bits, 14, 1);
-    b_king    = count_bits_range(b_bits, 15, 1); // King: 0 pts, Resign / Checkmate
+    b_rooks   = ((b_bits >> 8) & 1) + ((b_bits >> 15) & 1);
+    b_knights = ((b_bits >> 9) & 1) + ((b_bits >> 14) & 1);
+    b_bishops = ((b_bits >> 10) & 1) + ((b_bits >> 13) & 1);
+    b_queen   = ((b_bits >> 11) & 1);
+    b_king    = ((b_bits >> 12) & 1); // King: 0 pts, Resign / Checkmate
 
     b_score = (b_pawns * VAL_PAWN) + (b_knights * VAL_KNIGHT) + 
               (b_bishops * VAL_BISHOP) + (b_rooks * VAL_ROOK) + (b_queen * VAL_QUEEN);
