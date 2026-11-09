@@ -1,15 +1,11 @@
 # Supreme Chess Set — Engineering Requirements & Scope Specification
 
-## 1. Project Overview & Vision
+Project Overview & Vision
 The **Supreme Chess Set** is a tournament-regulation miniature magnetic travel chess set engineered for portable, on-the-go play with a built-in automated capture scoring engine. Unlike traditional sets that require manual calculation or complex high-overhead computer vision cameras, the Supreme Chess Set incorporates dedicated, custom-molded capture slots with embedded micro Hall-effect sensors. 
 
 When captured pieces are placed in their home slots within the slide-out capture trays, the embedded microcontroller automatically identifies the captured pieces, tallies the point totals, calculates live material advantages, and renders real-time game status to an integrated 0.96" OLED display.
 
-The complete system is engineered under strict cost constraints to remain **strictly under $30.00 USD total BOM** while meeting Hack Club submission guidelines for editable CAD, open-source PCB, and clean firmware.
-
----
-
-## 2. Core Functional Requirements (FR)
+Core Functional Requirements
 
 ### FR-01: Magnetic Retention & Portability
 - **Board Footprint:** 160 mm × 160 mm playing surface (folded travel dimensions 168 mm × 90 mm × 28 mm).
@@ -59,19 +55,3 @@ The complete system is engineered under strict cost constraints to remain **stri
 | Pawn Height / Base Dia | 18 mm height / 12 mm diameter | ± 0.3 mm |
 | Magnet Dimensions | 5 mm diameter × 2 mm height (N35) | ± 0.05 mm |
 | Total Product Weight | < 320 grams (including battery & pieces) | ± 15 g |
-
----
-
-## 4. User Stories & Acceptance Criteria
-
-- **US-01: Commute Travel Play**  
-  *As a traveling chess enthusiast*, I want a portable magnetic board that folds into a pocketable form factor and holds pieces tightly, so I can play without pieces flying off when traveling on the subway or plane.  
-  *Acceptance:* Invert board to 80° with pieces placed; zero pieces dislodge.
-
-- **US-02: Instant Material Tracking**  
-  *As an amateur player*, I want to know the material advantage at a glance without having to calculate points in my head, so I can evaluate endgame trades accurately.  
-  *Acceptance:* Dropping a captured Queen into slot increases score by 9 within 150 ms and updates display material lead.
-
-- **US-03: Low-Cost Self-Fabrication**  
-  *As a Hack Club builder*, I want all parts to cost less than $30 and be 3D printable on standard FDM printers (PLA/PETG) without requiring exotic tools.  
-  *Acceptance:* Verified BOM total ≤ $30.00 USD, 3D models exportable to standard `.step` and `.stl`.
