@@ -26,7 +26,7 @@ Every component listed below has been verified with exact distributor URLs, part
 | 12 | M2 × 8mm Socket Head Screws & Brass Threaded Heatsets (8 pcs) | HDW1–HDW8 | 8 | $0.08 | $0.64 | [AliExpress M2 Brass Knurled Heatsets & Screws](https://www.aliexpress.us/item/3256803248729112.html) |
 | 13 | 10kΩ 0805 SMD Resistors & 0.1µF Decoupling Capacitors (13 pcs total) | R1–R8, C1–C5 | 13 | $0.03 | $0.39 | [LCSC 10k 0805 (Part # C17414)](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8J0103T5E_C17414.html) / [LCSC 0.1uF 0805 (Part # C49678)](https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL21B104KBCNNNC_C49678.html) |
 | 14 | 30AWG Flexible Silicone Wire & 6-Pin 0.5mm FFC Ribbon Cable | W1 | 1 | $1.01 | $1.01 | [AliExpress 6-Pin 0.5mm Pitch FFC Ribbon](https://www.aliexpress.us/item/3256802958471203.html) |
-| **—** | **TOTAL SOURCED PROJECT COST** | **—** | **—** | **—** | **$26.85** | **Fully Verified < $30.00 Limit ($3.15 Contingency Reserve)** |
+| **—** | **TOTAL SOURCED PROJECT COST** | **—** | **—** | **—** | **$26.85** |
 
 ---
 
