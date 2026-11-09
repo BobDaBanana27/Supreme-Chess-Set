@@ -41,7 +41,7 @@ The complete system is engineered under strict cost constraints to remain **stri
 
 ### FR-04: Electrical & Power Subsystem
 - **Microcontroller:** RP2040-Zero or Raspberry Pi Pico (Dual ARM Cortex-M0+, 133 MHz, 2MB Flash, USB-C native).
-- **I/O Multiplexing:** 2× 74HC165 8-bit parallel-in serial-out shift registers or 74HC4067 multiplexers to read 30 digital sensor lines using only 4 MCU pins (Data, Clock, Latch, Enable).
+- **I/O Multiplexing:** 2× 74HC165 8-bit parallel-in serial-out shift registers or 74HC4067 multiplexers to read 30 digital sensor lines using only 4 MCU pins (Data, SCK, Latch, Enable).
 - **Power Source:** 3.7V 500 mAh LiPo rechargeable battery (602040 form factor) with onboard TP4056 USB-C charging IC and DW01A battery protection circuit.
 - **Runtime:** Continuous play runtime > 10 hours on a single charge; low-power standby mode when inactive for > 10 minutes.
 - **Budget Target:** Bill of Materials (BOM) strictly under $30.00 USD at single-unit prototype quantities.
