@@ -41,4 +41,4 @@ The primary innovation of this project is detecting chess captures without expen
 | 0.56" 4-Digit 7-Segment LED | $1.80 | 4 numerical characters | Moderate | ~30 mA | 40 × 14 × 8 mm |
 | 1602 LCD with I2C Backpack | $2.90 | 16 × 2 characters | Poor (<90°) | ~45 mA with backlight | 80 × 36 × 12 mm (huge) |
 
-**Selection Decision:** The **0.96" SSD1306 OLED (128×64)** is chosen. Its crisp monochrome pixels allow displaying not only numerical point tallies, but also custom chess piece glyphs (♛, ♜, ♝, ♞, ♟), a graphical material balance gauge bar, and an optional blitz chess match clock.
+**Selection Decision:** The **0.96" SSD1306 OLED (128×64)** is chosen. Its crisp monochrome pixels allow displaying not only numerical point tallies, but also custom chess piece glyphs (♛, ♜, ♝, ♞, ♟), a graphical material balance gauge bar, and hardware diagnostics.
