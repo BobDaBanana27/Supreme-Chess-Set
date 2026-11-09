@@ -80,10 +80,10 @@ bool SensorMatrix_IsPiecePresent(const SensorMatrix_t *sm, uint8_t slot_index) {
 
 uint32_t SensorMatrix_GetWhiteBitfield(const SensorMatrix_t *sm) {
     if (!sm) return 0;
-    return sm->debounced_state & 0x7FFF; // Lowest 15 bits
+    return sm->debounced_state & 0xFFFF; // 16 bits (8 Pawns + 8 Majors/Royals)
 }
 
 uint32_t SensorMatrix_GetBlackBitfield(const SensorMatrix_t *sm) {
     if (!sm) return 0;
-    return (sm->debounced_state >> 16) & 0x7FFF; // Upper 15 bits
+    return (sm->debounced_state >> 16) & 0xFFFF; // Upper 16 bits (8 Pawns + 8 Majors/Royals)
 }
