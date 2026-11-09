@@ -129,15 +129,20 @@
 
 ---
 
-### Chunk 11 — Staunton Chess Piece Set CAD (FreeCAD)
+### Chunk 11 — High-Detail Support-Free Chess Piece Set CAD (FreeCAD)
 **Estimated Time: ~2.5 hours**
 
 * **Work Completed:**
-  * Modeled a complete 6-piece Staunton-style travel chess set in FreeCAD (`cad/chess_pieces.FCStd`): Pawn, Rook, Knight, Bishop, Queen, and King.
-  * Designed custom base cavities (Ø5.20 × 2.20 mm) with a +0.10 mm interference fit for friction-retaining 5×2 mm N35 magnets without glue.
-  * Optimized center-of-gravity: concentrated mass in the base to lower the centroid ($CG = 4.2\text{ mm}$), ensuring pieces resist tipping up to an 82° tilt angle.
-  * Sculpted distinct finger-pinch silhouettes and modeled the organic Knight profile using lofted sketches.
-  * Exported STEP assemblies and detailed layer height parameters in `docs/CHESS_PIECES.md`.
+  * Modeled a complete 6-piece high-detail Staunton travel chess set in FreeCAD (`cad/chess_pieces.FCStd` / `.step`): Pawn, Rook, Knight, Bishop, Queen, and King.
+  * Engineered 100% support-free FDM 3D printing geometry (0% support needed): all upward flares and chamfers maintain slopes of $\ge 45^\circ$ from horizontal.
+  * Pawn: Classical stepped pedestal, tapered stem, 45° astragal collar, and spherical head.
+  * Rook: Medieval castle tower with stone masonry belt, flared corbel parapet, recessed well with 45° conical floor, and 4 vertical embrasure crenellations.
+  * Knight: Fully sculpted horse head with 4-tier serrated mane ridges, dual upright pointed ears, recessed eye sockets, nostrils, tapered snout, and a steep 55° self-supporting throat.
+  * Bishop: Slender concave stem, double collar rings, teardrop mitre cap, 45° upward-angled cleft cut, and spherical finial ball.
+  * Queen: Royal stepped pedestal, double collars, flared coronet with 8 radial V-notches creating 8 pointed crown petals, inner royal dome, and finial pearl.
+  * King: Imperial pedestal, column waist rings, flared capital, imperial headband and dome, topped with a self-supporting heraldic Formée cross with 45° under-facets.
+  * Standardized support-free magnet pockets: embedded blind cavity ($\varnothing 5.20\text{ mm} \times 1.80\text{ mm}$) with a 45° conical ceiling in each piece base.
+  * Exported STEP models and documented print parameters in `docs/CHESS_PIECES.md`.
 
 ---
 
