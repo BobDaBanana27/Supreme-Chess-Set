@@ -10,5 +10,5 @@ Item,Qty,Supplier,Cost/item,Total Cost,link
 9,1,LCSC,$0.00,$0.00,
 12,8,AliExpress,$0.00,$0.00,
 13,13,LCSC,$0.00,$0.00,
-14,1,AliExpress,$0.00,$0.00,
+14,1,AliExpress,$1.01,$1.01,https://www.aliexpress.us/item/3256802958471203.html
 Estimated total shipping,1,,,$0.00,
