@@ -19,27 +19,27 @@ extern "C" {
 
 // Bitfield definitions (Exact 32-bit mapping for 4x 74HC165 8-bit registers):
 // White Tray (16 Bits):
-//   Row 1: Bits 0-7: White Pawns 1-8 (1 pt each, pitch 18.0mm)
-//   Row 2: Symmetrical Tournament Rank (pitch 18.0mm, Left-to-Right):
-//     Bit 8:  White Rook 1 (5 pts, Ø14.0mm)
-//     Bit 9:  White Knight 1 (3 pts, Ø14.0mm)
-//     Bit 10: White Bishop 1 (3 pts, Ø14.0mm)
-//     Bit 11: White Queen (9 pts, Ø15.5mm)
-//     Bit 12: White King (0 pts / Resignation trigger & Travel Home, Ø15.5mm)
-//     Bit 13: White Bishop 2 (3 pts, Ø14.0mm)
-//     Bit 14: White Knight 2 (3 pts, Ø14.0mm)
-//     Bit 15: White Rook 2 (5 pts, Ø14.0mm)
+//   Row 1: Bits 0-7: White Pawns 1-8 (1 pt each, pitch 18.0mm, Ø13.0mm)
+//   Row 2: Organized Major & Royal Rank (pitch 18.0mm, Left-to-Right):
+//     Bit 8:  White King (0 pts / Resignation trigger & Travel Home, Ø15.5mm)
+//     Bit 9:  White Queen (9 pts, Ø15.5mm)
+//     Bit 10: White Rook 1 (5 pts, Ø14.0mm)
+//     Bit 11: White Rook 2 (5 pts, Ø14.0mm)
+//     Bit 12: White Knight 1 (3 pts, Ø14.0mm)
+//     Bit 13: White Knight 2 (3 pts, Ø14.0mm)
+//     Bit 14: White Bishop 1 (3 pts, Ø14.0mm)
+//     Bit 15: White Bishop 2 (3 pts, Ø14.0mm)
 // Black Tray (16 Bits):
-//   Row 1: Bits 16-23: Black Pawns 1-8 (1 pt each, pitch 18.0mm)
-//   Row 2: Symmetrical Tournament Rank (pitch 18.0mm, Left-to-Right):
-//     Bit 24: Black Rook 1 (5 pts, Ø14.0mm)
-//     Bit 25: Black Knight 1 (3 pts, Ø14.0mm)
-//     Bit 26: Black Bishop 1 (3 pts, Ø14.0mm)
-//     Bit 27: Black Queen (9 pts, Ø15.5mm)
-//     Bit 28: Black King (0 pts / Resignation trigger & Travel Home, Ø15.5mm)
-//     Bit 29: Black Bishop 2 (3 pts, Ø14.0mm)
-//     Bit 30: Black Knight 2 (3 pts, Ø14.0mm)
-//     Bit 31: Black Rook 2 (5 pts, Ø14.0mm)
+//   Row 1: Bits 16-23: Black Pawns 1-8 (1 pt each, pitch 18.0mm, Ø13.0mm)
+//   Row 2: Organized Major & Royal Rank (pitch 18.0mm, Left-to-Right):
+//     Bit 24: Black King (0 pts / Resignation trigger & Travel Home, Ø15.5mm)
+//     Bit 25: Black Queen (9 pts, Ø15.5mm)
+//     Bit 26: Black Rook 1 (5 pts, Ø14.0mm)
+//     Bit 27: Black Rook 2 (5 pts, Ø14.0mm)
+//     Bit 28: Black Knight 1 (3 pts, Ø14.0mm)
+//     Bit 29: Black Knight 2 (3 pts, Ø14.0mm)
+//     Bit 30: Black Bishop 1 (3 pts, Ø14.0mm)
+//     Bit 31: Black Bishop 2 (3 pts, Ø14.0mm)
 
 typedef struct {
     uint32_t raw_state;        // Current raw un-debounced reading
