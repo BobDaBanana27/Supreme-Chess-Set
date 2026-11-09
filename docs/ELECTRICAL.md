@@ -39,7 +39,7 @@ The system operates from a single-cell 3.7V 500mAh Lithium-Polymer (LiPo) batter
 |:---:|:---:|:---:|:---:|:---:|---|
 | 1 | GP0 | `TRAY_WHITE_EN` | Output | White Tray Shift Register CE (Clock Enable) | Active LOW, 3.3V CMOS |
 | 2 | GP1 | `TRAY_BLACK_EN` | Output | Black Tray Shift Register CE (Clock Enable) | Active LOW, 3.3V CMOS |
-| 3 | GP2 | `BTN_MODE` | Input | Mode / Clock Toggle Pushbutton (SW2) | Internal Pull-up (50kΩ), active LOW |
+| 3 | GP2 | `BTN_MODE` | Input | UI Mode Toggle Pushbutton (SW2) | Internal Pull-up (50kΩ), active LOW |
 | 4 | GP3 | `BTN_RESET` | Input | New Game / Reset Pushbutton (SW3) | Internal Pull-up (50kΩ), active LOW |
 | 6 | GP4 | `I2C0_SDA` | Bidirectional | SSD1306 OLED Display Serial Data | Open-drain, external 4.7kΩ pull-up |
 | 7 | GP5 | `I2C0_SCL` | Output | SSD1306 OLED Display Serial Clock | Open-drain, external 4.7kΩ pull-up |
