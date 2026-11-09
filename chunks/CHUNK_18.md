@@ -6,7 +6,7 @@
   - *TC-02 (Sensor Actuation):* 3,000 piece insertions verified with 100% detection rate and $< 0.05\text{ V}$ crosstalk noise margin.
   - *TC-03 (Scoring Accuracy):* Validated 32,768 permutations with zero mathematical errors.
   - *TC-04 (Battery Life):* Measured 21.8 hours continuous gameplay from 500mAh LiPo and 34.8 µA dormant sleep.
-  - *TC-05 (Budget Hard-Cap):* Sourced BOM locked at **$26.85 USD**, strictly under the $30.00 USD program cap.
+  - *TC-05 (Budget Hard-Cap):* Sourced BOM locked at **$28.45 USD**, strictly under the $30.00 USD program cap.
 - **Assembly Documentation:** Authored the comprehensive maker build guide (`docs/ASSEMBLY_GUIDE.md`) with polarity rules, 3D printing parameters, and soldering instructions.
 - **Full Progression Log:** Compiled `docs/PROGRESSION.md` tracking all 18 hours/chunks with photo deliverables.
 - **Master Release Deliverables:** Packaged the complete repository with hero rendering banner (`assets/hour18_hero_banner.svg`) and root `README.md` passing all Hack Club automated checks.
