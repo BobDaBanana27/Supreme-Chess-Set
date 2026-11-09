@@ -41,49 +41,49 @@
       <text x="380" y="24" fill="#58a6ff" font-size="11" text-anchor="middle">♟</text>
     </g>
 
-    <!-- Row 2: Royal Court & Majors (Symmetrical Tournament Rank: R, N, B, Q, K, B, N, R) -->
+    <!-- Row 2: Royal Court & Majors Ordered by Hierarchy & Size (King, Queen, Rooks, Knights, Bishops) -->
     <g transform="translate(15, 130)">
-      <text x="10" y="-8" fill="#8b949e" font-size="10" font-weight="bold">ROW 2: MAJOR PIECES (Aligned Column-for-Column with Row 1)</text>
+      <text x="10" y="-8" fill="#8b949e" font-size="10" font-weight="bold">ROW 2: ROYALS &amp; MAJORS (King, Queen, Rooks, Knights, Bishops)</text>
 
-      <!-- Col 0: Rook 1 -->
-      <circle cx="30" cy="30" r="15" fill="#0d1117" stroke="#58a6ff" stroke-width="1.5"/>
-      <text x="30" y="35" fill="#58a6ff" font-size="12" font-weight="bold" text-anchor="middle">♜</text>
-      <text x="30" y="60" fill="#8b949e" font-size="8" text-anchor="middle">R1 (+5)</text>
+      <!-- Col 0: King (Largest Ø15.5mm) -->
+      <circle cx="30" cy="30" r="17" fill="#0d1117" stroke="#f85149" stroke-width="2"/>
+      <text x="30" y="35" fill="#f85149" font-size="14" font-weight="bold" text-anchor="middle">♔</text>
+      <text x="30" y="62" fill="#f85149" font-size="9" text-anchor="middle">K (0p)</text>
 
-      <!-- Col 1: Knight 1 -->
-      <circle cx="80" cy="30" r="15" fill="#0d1117" stroke="#3fb950" stroke-width="1.5"/>
-      <text x="80" y="35" fill="#3fb950" font-size="12" font-weight="bold" text-anchor="middle">♞</text>
-      <text x="80" y="60" fill="#8b949e" font-size="8" text-anchor="middle">N1 (+3)</text>
+      <!-- Col 1: Queen (Largest Ø15.5mm) -->
+      <circle cx="80" cy="30" r="17" fill="#0d1117" stroke="#e3b341" stroke-width="2"/>
+      <text x="80" y="35" fill="#e3b341" font-size="14" font-weight="bold" text-anchor="middle">♛</text>
+      <text x="80" y="62" fill="#e3b341" font-size="9" text-anchor="middle">Q (+9)</text>
 
-      <!-- Col 2: Bishop 1 -->
-      <circle cx="130" cy="30" r="15" fill="#0d1117" stroke="#a371f7" stroke-width="1.5"/>
-      <text x="130" y="35" fill="#a371f7" font-size="12" font-weight="bold" text-anchor="middle">♝</text>
-      <text x="130" y="60" fill="#8b949e" font-size="8" text-anchor="middle">B1 (+3)</text>
+      <!-- Col 2: Rook 1 (Ø14.0mm) -->
+      <circle cx="130" cy="30" r="15" fill="#0d1117" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="130" y="35" fill="#58a6ff" font-size="12" font-weight="bold" text-anchor="middle">♜</text>
+      <text x="130" y="60" fill="#8b949e" font-size="8" text-anchor="middle">R1 (+5)</text>
 
-      <!-- Col 3: Queen -->
-      <circle cx="180" cy="30" r="17" fill="#0d1117" stroke="#e3b341" stroke-width="2"/>
-      <text x="180" y="35" fill="#e3b341" font-size="14" font-weight="bold" text-anchor="middle">♛</text>
-      <text x="180" y="62" fill="#e3b341" font-size="9" text-anchor="middle">Q (+9)</text>
+      <!-- Col 3: Rook 2 (Ø14.0mm) -->
+      <circle cx="180" cy="30" r="15" fill="#0d1117" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="180" y="35" fill="#58a6ff" font-size="12" font-weight="bold" text-anchor="middle">♜</text>
+      <text x="180" y="60" fill="#8b949e" font-size="8" text-anchor="middle">R2 (+5)</text>
 
-      <!-- Col 4: King -->
-      <circle cx="230" cy="30" r="17" fill="#0d1117" stroke="#f85149" stroke-width="2"/>
-      <text x="230" y="35" fill="#f85149" font-size="14" font-weight="bold" text-anchor="middle">♔</text>
-      <text x="230" y="62" fill="#f85149" font-size="9" text-anchor="middle">K (0p)</text>
+      <!-- Col 4: Knight 1 (Ø14.0mm) -->
+      <circle cx="230" cy="30" r="15" fill="#0d1117" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="230" y="35" fill="#3fb950" font-size="12" font-weight="bold" text-anchor="middle">♞</text>
+      <text x="230" y="60" fill="#8b949e" font-size="8" text-anchor="middle">N1 (+3)</text>
 
-      <!-- Col 5: Bishop 2 -->
-      <circle cx="280" cy="30" r="15" fill="#0d1117" stroke="#a371f7" stroke-width="1.5"/>
-      <text x="280" y="35" fill="#a371f7" font-size="12" font-weight="bold" text-anchor="middle">♝</text>
-      <text x="280" y="60" fill="#8b949e" font-size="8" text-anchor="middle">B2 (+3)</text>
+      <!-- Col 5: Knight 2 (Ø14.0mm) -->
+      <circle cx="280" cy="30" r="15" fill="#0d1117" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="280" y="35" fill="#3fb950" font-size="12" font-weight="bold" text-anchor="middle">♞</text>
+      <text x="280" y="60" fill="#8b949e" font-size="8" text-anchor="middle">N2 (+3)</text>
 
-      <!-- Col 6: Knight 2 -->
-      <circle cx="330" cy="30" r="15" fill="#0d1117" stroke="#3fb950" stroke-width="1.5"/>
-      <text x="330" y="35" fill="#3fb950" font-size="12" font-weight="bold" text-anchor="middle">♞</text>
-      <text x="330" y="60" fill="#8b949e" font-size="8" text-anchor="middle">N2 (+3)</text>
+      <!-- Col 6: Bishop 1 (Ø14.0mm) -->
+      <circle cx="330" cy="30" r="15" fill="#0d1117" stroke="#a371f7" stroke-width="1.5"/>
+      <text x="330" y="35" fill="#a371f7" font-size="12" font-weight="bold" text-anchor="middle">♝</text>
+      <text x="330" y="60" fill="#8b949e" font-size="8" text-anchor="middle">B1 (+3)</text>
 
-      <!-- Col 7: Rook 2 -->
-      <circle cx="380" cy="30" r="15" fill="#0d1117" stroke="#58a6ff" stroke-width="1.5"/>
-      <text x="380" y="35" fill="#58a6ff" font-size="12" font-weight="bold" text-anchor="middle">♜</text>
-      <text x="380" y="60" fill="#8b949e" font-size="8" text-anchor="middle">R2 (+5)</text>
+      <!-- Col 7: Bishop 2 (Ø14.0mm) -->
+      <circle cx="380" cy="30" r="15" fill="#0d1117" stroke="#a371f7" stroke-width="1.5"/>
+      <text x="380" y="35" fill="#a371f7" font-size="12" font-weight="bold" text-anchor="middle">♝</text>
+      <text x="380" y="60" fill="#8b949e" font-size="8" text-anchor="middle">B2 (+3)</text>
     </g>
 
     <!-- Side Guide Rails Callout -->
