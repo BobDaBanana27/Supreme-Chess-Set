@@ -29,4 +29,4 @@ This test report documents the empirical hardware, software, and mechanical veri
 
 ### TC-05: Hack Club $30 USD Budget Verification
 - **Test Objective:** Confirm that the prototype Bill of Materials remains strictly below the $30.00 USD program cap.
-- **Result:** **PASS**. Final itemized BOM sums to **$26.85 USD**, maintaining an unallocated contingency margin of **$3.15 USD (10.5%)**.
+- **Result:** **PASS**. Final itemized BOM sums to **$28.45 USD**, maintaining an unallocated contingency margin of **$1.55 USD (5.2%)**.
