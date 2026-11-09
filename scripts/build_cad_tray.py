@@ -1,13 +1,21 @@
 """
-Supreme Chess Set — Precision Symmetrical Capture Tray CAD Generator
-Builds 100% even, balanced, and centered capture trays for both White and Black armies.
-Features:
-- Perfectly uniform 8-column x 2-row socket matrix on exact 18.0mm pitch (matching board squares).
-- Row 1 (Pawns): 8x identical 13.0mm dia sockets, centered at y = 22.0mm.
-- Row 2 (Royal Court & Majors): 8x sockets centered at y = 58.0mm in classical tournament rank:
-    Rook (14.0mm), Knight (14.0mm), Bishop (14.0mm), Queen (15.5mm), King (15.5mm), Bishop (14.0mm), Knight (14.0mm), Rook (14.0mm).
-- 100% symmetrical: Queen and King in center (Cols 3 & 4), flanked by Bishops, Knights, and Rooks.
-- Column X positions: [15, 33, 51, 69, 87, 105, 123, 141] mm with equal 15.0mm side margins.
+Supreme Chess Set — Precision Organized Capture Tray CAD Generator
+Builds 100% even, balanced, and organized capture trays for each player color.
+Layout:
+- 8-column x 2-row socket matrix on exact 18.0mm pitch (matching board squares).
+- Centered across 156.0mm drawer body with equal 15.0mm left and right margins:
+    col_x = [15.0, 33.0, 51.0, 69.0, 87.0, 105.0, 123.0, 141.0] mm
+- Back Row (Row 2, y = 58.0mm): Major & Royal pieces ordered left-to-right by hierarchy/size:
+    Col 0: King (Ø15.5mm, 0 pts / Resignation & Travel Home)
+    Col 1: Queen (Ø15.5mm, 9 pts)
+    Col 2: Rook 1 (Ø14.0mm, 5 pts)
+    Col 3: Rook 2 (Ø14.0mm, 5 pts)
+    Col 4: Knight 1 (Ø14.0mm, 3 pts)
+    Col 5: Knight 2 (Ø14.0mm, 3 pts)
+    Col 6: Bishop 1 (Ø14.0mm, 3 pts)
+    Col 7: Bishop 2 (Ø14.0mm, 3 pts)
+- Front Row (Row 1, y = 22.0mm):
+    Cols 0-7: 8x Pawns (Ø13.0mm, 1 pt each)
 - Dual sensor strip pockets underneath, maintaining uniform 0.8mm floor membrane under all 16 sockets.
 - Exports universal `capture_tray.FCStd` / `.step`, plus dedicated `capture_tray_white.step` and `capture_tray_black.step`.
 """
@@ -18,7 +26,7 @@ import os
 
 os.makedirs("cad", exist_ok=True)
 
-def generate_tray(tray_name, mirror_court=False):
+def generate_tray(tray_name):
     doc = FreeCAD.newDocument(tray_name)
     
     length = 156.0
@@ -60,37 +68,24 @@ def generate_tray(tray_name, mirror_court=False):
     
     cuts = []
     
-    # Row 1 (y = 22.0mm): 8 Pawns (13.0mm dia x 4.8mm deep)
+    # Front Row (Row 1, y = 22.0mm): 8 Pawns (13.0mm dia x 4.8mm deep)
     for x in col_x:
         pawn_socket = Part.makeCylinder(6.5, socket_depth)
         pawn_socket.translate(FreeCAD.Vector(x, 22.0, height - socket_depth))
         cuts.append(pawn_socket)
         
-    # Row 2 (y = 58.0mm): Classical Symmetrical Tournament Rank
-    # Standard: Rook, Knight, Bishop, Queen, King, Bishop, Knight, Rook
-    if not mirror_court:
-        row2_pieces = [
-            ("Rook_1",   7.0),   # 14.0mm dia (Col 0: x=15)
-            ("Knight_1", 7.0),   # 14.0mm dia (Col 1: x=33)
-            ("Bishop_1", 7.0),   # 14.0mm dia (Col 2: x=51)
-            ("Queen",    7.75),  # 15.5mm dia (Col 3: x=69)
-            ("King",     7.75),  # 15.5mm dia (Col 4: x=87)
-            ("Bishop_2", 7.0),   # 14.0mm dia (Col 5: x=105)
-            ("Knight_2", 7.0),   # 14.0mm dia (Col 6: x=123)
-            ("Rook_2",   7.0),   # 14.0mm dia (Col 7: x=141)
-        ]
-    else:
-        # Symmetrical mirror (Queen/King positioned for Black's perspective)
-        row2_pieces = [
-            ("Rook_1",   7.0),   # 14.0mm dia
-            ("Knight_1", 7.0),   # 14.0mm dia
-            ("Bishop_1", 7.0),   # 14.0mm dia
-            ("King",     7.75),  # 15.5mm dia
-            ("Queen",    7.75),  # 15.5mm dia
-            ("Bishop_2", 7.0),   # 14.0mm dia
-            ("Knight_2", 7.0),   # 14.0mm dia
-            ("Rook_2",   7.0),   # 14.0mm dia
-        ]
+    # Back Row (Row 2, y = 58.0mm): Organized by Hierarchy & Size
+    # King & Queen (largest: 15.5mm dia), Rooks, Knights, Bishops (14.0mm dia)
+    row2_pieces = [
+        ("King",     7.75),  # 15.5mm dia (Col 0: x=15.0)
+        ("Queen",    7.75),  # 15.5mm dia (Col 1: x=33.0)
+        ("Rook_1",   7.0),   # 14.0mm dia (Col 2: x=51.0)
+        ("Rook_2",   7.0),   # 14.0mm dia (Col 3: x=69.0)
+        ("Knight_1", 7.0),   # 14.0mm dia (Col 4: x=87.0)
+        ("Knight_2", 7.0),   # 14.0mm dia (Col 5: x=105.0)
+        ("Bishop_1", 7.0),   # 14.0mm dia (Col 6: x=123.0)
+        ("Bishop_2", 7.0),   # 14.0mm dia (Col 7: x=141.0)
+    ]
         
     for i, (name, radius) in enumerate(row2_pieces):
         x = col_x[i]
@@ -109,27 +104,27 @@ def generate_tray(tray_name, mirror_court=False):
     
     return doc, final_tray
 
-print("Generating perfectly even Capture Trays...")
+print("Generating precision organized Capture Trays...")
 
 # 1. Master Universal Tray
-doc_univ, tray_univ = generate_tray("CaptureTrayUniversal", mirror_court=False)
+doc_univ, tray_univ = generate_tray("CaptureTrayUniversal")
 doc_univ.saveAs("cad/capture_tray.FCStd")
 Part.export([tray_univ], "cad/capture_tray.step")
 print("  - cad/capture_tray.FCStd")
 print("  - cad/capture_tray.step")
 
-# 2. White Tray (Standard White orientation: Queen on Col 3, King on Col 4)
-doc_w, tray_w = generate_tray("CaptureTrayWhite", mirror_court=False)
+# 2. White Tray
+doc_w, tray_w = generate_tray("CaptureTrayWhite")
 doc_w.saveAs("cad/capture_tray_white.FCStd")
 Part.export([tray_w], "cad/capture_tray_white.step")
 print("  - cad/capture_tray_white.FCStd")
 print("  - cad/capture_tray_white.step")
 
-# 3. Black Tray (Standard Black orientation)
-doc_b, tray_b = generate_tray("CaptureTrayBlack", mirror_court=True)
+# 3. Black Tray
+doc_b, tray_b = generate_tray("CaptureTrayBlack")
 doc_b.saveAs("cad/capture_tray_black.FCStd")
 Part.export([tray_b], "cad/capture_tray_black.step")
 print("  - cad/capture_tray_black.FCStd")
 print("  - cad/capture_tray_black.step")
 
-print("All capture trays generated with 100% even 18mm pitch and symmetrical alignment!")
+print("All capture trays generated with organized hierarchy: King, Queen, Rooks, Knights, Bishops, and Pawns!")
