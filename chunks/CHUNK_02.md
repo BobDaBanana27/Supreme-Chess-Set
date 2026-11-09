@@ -3,7 +3,7 @@
 ## Overview & Work Completed
 - **Engineering Trade Study:** Conducted comprehensive quantitative evaluation of capture-sensing modalities (comparing digital Hall ICs, reed switches, microswitches, optical IR, and RFID). Digital Hall-effect sensors achieved the highest weighted score (9.45/10) due to solid-state zero wear, low cost ($0.11/ea), compact TO-92/SOT-23 packaging, and the key ability to detect the magnets already embedded in the chess piece bases.
 - **Microcontroller Selection:** Selected the RP2040-Zero for its native USB-C UF2 flashing, 264KB SRAM (enabling double-buffered display rendering), dual ARM cores, and $4.20 price point.
-- **Bill of Materials (BOM) Optimization:** Built a line-by-line itemized BOM strictly fulfilling the Hack Club requirement of remaining under $30.00 USD. Sourced parts total exactly **$26.85 USD**, maintaining an unallocated buffer of **$3.15 USD (10.5%)**. Every item is linked directly to live distributor catalog listings on LCSC, AliExpress, Amazon, and JLCPCB with part numbers.
+- **Bill of Materials (BOM) Optimization:** Built a line-by-line itemized BOM strictly fulfilling the Hack Club requirement of remaining under $30.00 USD. Sourced parts total exactly **$28.45 USD**, maintaining an unallocated buffer of **$1.55 USD (5.2%)**. Every item is linked directly to live distributor catalog listings on Waveshare, LCSC, SparkFun, Amazon, McMaster-Carr, and JLCPCB with part numbers.
 - **Deliverables Produced:**
   - `docs/TRADE_STUDY.md`: Five-way sensor trade study, MCU benchmark, and display interface comparison.
   - `docs/BOM.md`: Markdown itemized BOM with direct clickable product links and distributor allocations.
