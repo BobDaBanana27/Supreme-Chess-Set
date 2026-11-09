@@ -24,7 +24,7 @@
   * Selected unipolar digital Hall-effect sensors (A3144/AH49E) based on zero mechanical wear, miniature SOT-23/TO-92 footprints, $0.11 unit pricing, and direct compatibility with the neodymium magnets already embedded in the chess piece bases.
   * Selected the RP2040-Zero microcontroller board ($4.20) for its dual-core processing, native USB-C UF2 flashing, and 264 KB SRAM.
   * Researched, priced, and sourced every structural fastener, electronic IC, passive component, battery cell, and filament spool across distributor catalogs (LCSC, AliExpress, Amazon, JLCPCB).
-  * Compiled the verified itemized Bill of Materials totaling $26.85 USD ($3.15 reserve margin) in `docs/BOM.md` and `docs/BOM.csv`.
+  * Compiled the verified itemized Bill of Materials totaling $28.45 USD ($1.55 reserve margin) in `docs/BOM.md` and `docs/BOM.csv`.
 
 ---
 
@@ -231,7 +231,7 @@
     * **Sensor actuation:** 3,000 piece insertions verified with zero dropped reads and no adjacent slot crosstalk.
     * **Scoring accuracy:** Validated 32,768 input state combinations with zero mathematical desyncs.
     * **Battery runtime:** Measured 21.8 hours continuous active operation from 500 mAh battery.
-    * **Budget compliance:** Final sourced BOM verified at $26.85 USD, remaining under the $30.00 cap.
+    * **Budget compliance:** Final sourced BOM verified at $28.45 USD, remaining under the $30.00 cap.
   * Authored a step-by-step maker assembly guide (`docs/ASSEMBLY_GUIDE.md`) covering print profiles, magnet polarity orientation, and soldering steps.
   * Structured the complete open-source repository and pushed all project artifacts, CAD files, KiCad packages, and firmware to GitHub.
 
