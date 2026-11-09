@@ -2,8 +2,6 @@
 
 > **Portable Magnetic Travel Chess Set**  
 > Built for **Hack Club Half Life 2** | Repository: [`BobDaBanana27/Supreme-Chess-Set`](https://github.com/BobDaBanana27/Supreme-Chess-Set)  
-> Total Bill of Materials: **$13.96 USD** (well within the $30.00 USD program budget)
-
 ---
 
 ## What is it?
